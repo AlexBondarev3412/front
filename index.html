@@ -7,22 +7,24 @@
 </head>
 <body>
 <header>
-	<div class="logo">
-		<a href="">
-			<img src="images/logo.png" alt="Snow"/>
-		</a>             
-	</div>  
-	<div class="header-right">
-		<div class="navigation">
-			<ul>
-				<li><a href="" title="About">About</a></li>
-				<li><a href="" title="Contact">Contact</a></li>
-				<li><a href="" title="Catalog">Catalog</a></li>
-				<li><a href="" title="Blog">Blog</a></li>
-			</ul>
-		</div>
-		<div class="profile">
-			<a href="" title="Sign In" class="button">Sign In</a>
+	<div class="container">
+		<div class="logo">
+			<a href="">
+				<img src="images/logo.png" alt="Snow">
+			</a>
+		</div>  
+		<div class="header-right">
+			<nav>
+				<ul>
+					<li><a href="" title="About">About</a></li>
+					<li><a href="" title="Contact">Contact</a></li>
+					<li><a href="" title="Catalog">Catalog</a></li>
+					<li><a href="" title="Blog">Blog</a></li>
+				</ul>
+			<nav>
+			<div class="profile">
+				<a href="" title="Sign In" class="button">Sign In</a>
+			</div>
 		</div>
 	</div>
 </header>
@@ -37,84 +39,57 @@
 				Donec orci sem, pretium ac dolor et, faucibus faucibus mauris. Etiam,pellentesque faucibus. Vestibulum gravida volutpat ipsum non ultrices.
 			</p>
 		</div>
-		<form class="box" action=" #" method="post">
-            <div class="sort-box">
+		<form class="box" action="#" method="get">
+			<div class="values-box">
 				<div class="sort-text"> Sort by: </div>
-                <label><input type="radio" name="sort-by" value="price">Price</label>
-                <label><input type="radio" name="sort-by" value="revelance">Revelance</label>
-                <label><input type="radio" name="sort-by" value="newest" text="New">Newest arrivals</label>
-            </div>
-            <div class="show-box">
-                <div class="sort-text"> Show by: </div>
-                <label><input type="checkbox" name="all" value="all">All</label>
-                <label><input type="checkbox" name="t-shirt" value="t-shirt">T-shirt</label>
-                <label><input type="checkbox" name="mockup" value="mockup">Mockup</label>
-            </div>
+				<label><input type="radio" name="sort-by" value="price">Price</label>
+				<label><input type="radio" name="sort-by" value="revelance">Revelance</label>
+				<label><input type="radio" name="sort-by" value="newest" text="New">Newest arrivals</label>
+				</div>
+			<div class="values-box">
+				<div class="sort-text"> Show by: </div>
+				<label><input type="checkbox" name="all" value="1">All</label>
+				<label><input type="checkbox" name="t-shirt" value="1">T-shirt</label>
+				<label><input type="checkbox" name="mockup" value="1">Mockup</label>
+			</div>
 			<input class="apply-button" type="submit" value="Apply">
-        </form>
+		</form>
+		<ul class="content">
+			<li><img src="images/image1.png"></li>
+			<li><img src="images/image2.png"></li>
+			<li><img src="images/image3.png"></li>
+			<li><img src="images/image4.png"></li>
+			<li><img src="images/image5.png"></li>
+			<li><img src="images/image6.png"></li>
+			<li><img src="images/image7.png"></li>
+			<li><img src="images/image8.png"></li>
+			<li><img src="images/image9.png"></li>
+		</ul>
 		<div class="box">
-			<div class="img1">
-				<img src="images/image1.png"></img>
-			</div>
-			<div class="img2">
-				<img src="images/image2.png"></img>
-			</div>
-			<div class="img3">
-				<img src="images/image3.png"></img>
-			</div>
-		</div>
-		<div class="box">
-			<div class="img1">
-				<img src="images/image4.png"></img> 
-			</div>
-			<div class="img2">
-				<img src="images/image5.png"></img>
-			</div>
-			<div class="img3">
-				<img src="images/image6.png"></img>
-			</div>
-		</div>
-		<div class="box">
-			<div class="img1">
-				<img src="images/image7.png"></img>
-			</div>
-			<div class="img2">
-				<img src="images/image8.png"></img>
-			</div>
-			<div class="img3">
-				<img src="images/image9.png"></img>:
-			</div>
-		</div>
-		<div class="box">
-			<div class="pages">
-				<ul class="pages">
-				<li class="left-page"><a href="" >Left</a></li>
-				<li class="page1"><a href="" >1</a></li>
-				<li class="page2" id="checked"><a href="" >2</a></li>
-				<li class="page3"><a href="" >3</a></li>
-				<li class="page4"><a href="" >4</a></li>
-				<li class="right-page"><a href="" >Right</a></li>
+				<ul class="pagination">
+				<a href=""><li class="prev-next">Left</li></a>
+				<a href=""><li >1</li></a>
+				<a href=""><li  >2</li></a>
+				<a href=""><li >3</li></a>
+				<a href=""><li  id="checked">4</li></a>
+				<a href=""><li class="prev-next">Right</li></a>
 				</ul>
-			</div>
 		</div>
 	</div>
 </main>
 
 <footer>
-	<a href="#twitter"> 
-		Twitter
-	</a>
-	<a href="#google"> 
-		Google+
-	</a>
-	<a href="#youtube"> 
-		YouTube
-	</a>
-	<a href="#instagram"> 
-		Instagram
-	</a>
-	<div class="footer-text">
-		2018 Summer kitcken
+	<div class="container">
+	Мы в соцсетях!
+		<ul class="social-list">
+			<li><a href="#twitter">Twitter</a></li>
+			<li><a href="#google">Google+</a></li>
+			<li><a href="#youtube">YouTube</a></li>
+			<li><a href="#instagram">Instagram</a></li>
+		</ul>
+		<div class="footer-text">
+			2018 Summer kitcken
+		</div>
 	</div>
 </footer>
 
