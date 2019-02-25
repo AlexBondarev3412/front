@@ -2,22 +2,17 @@ body {
 	margin: 0; 
 }
 header {
-	 
 	overflow: hidden;
 	padding: 20px 10px;
-	/*width: 100%;*/
 	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
-	/*margin-bottom: 20px;*/
 	margin: 0 auto;
 }
 .logo{
 	float: left;
-	/*padding-left: 10%;*/
 }
 .header-right {
 	display: flex;
 	float: right;
-	/*padding-right: 10%;*/
 }
 nav {
 	display: flex;
@@ -25,9 +20,6 @@ nav {
 nav li{ 
 	display: inline-block;
 }	
-nav ul {
-
-}
 nav a{
 	margin: 0px 21px 0px 21px;
 	font-size: 14px;
@@ -40,10 +32,8 @@ nav a:hover{
 	text-decoration: underline;
 }
 .content{
-	
 	padding-right:-10px;
 	display: inline-block;
-	
 	padding-left: 0px;
 }
 .content li{ 
@@ -72,7 +62,6 @@ margin: 0px 10px 10px 0px;
 	margin: 0 auto;
 	width: 1120px;
 	text-align: center;
-	/*margin: 0 10% 0 10%;*/
 }
 .header-text h1 {
 	font-size: 40px;
@@ -87,8 +76,6 @@ margin: 0px 10px 10px 0px;
 	width: 1120px;
 	display: inline-flex;
 	justify-content: space-between;
-	/*overflow: hidden;
-	white-space:nowrap;*/ 
 	margin: 20px 0px 20px 0px;
 }
 .box div{
@@ -98,7 +85,6 @@ margin: 0px 10px 10px 0px;
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
 	border-radius: 5px;
-	/*float: right;*/
 	margin-right: 20px;
 	font-size: 14px;
 	padding: 12px 1px 1px 20px;
@@ -108,25 +94,39 @@ margin: 0px 10px 10px 0px;
 	
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
-	/*box-sizing: border-box;*/
 	border-radius: 5px;
-	/*float: right;*/
 	margin-right: 20px;
-	/*width: 40%;*/
 	font-size: 14px;
 	padding: 12px 1px 1px 20px;
 	text-align: justify;
 	min-width:460px;
 }
+.values-box input[type='radio'] {
+	width: 25px;
+	height: 25px;
+	background: #FFFFFF;
+	border: 2px solid #BDBDBD;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-top:-4px;
+}
+.values-box input[type='checkbox'] {
+	width: 25px;
+	height: 25px;
+	background: #FFFFFF;
+	border: 2px solid #BDBDBD;
+	box-sizing: border-box;
+	border-radius: 4px;
+	margin-top:-4px;
+}
+
 .show-box {
 	display: inline-block;
 	background: #FFFFFF;
 	border: 1px solid #E0E0E0;
-	/*box-sizing: border-box;*/
 	border-radius: 5px;
 	float: left;
 	margin-right: 20px;
-	/*width: 40%;*/
 	font-size: 14px;
 	padding: 12px 1px 1px 20px;
 	min-width:390px;
@@ -141,8 +141,8 @@ margin: 0px 10px 10px 0px;
 	
 }
 .box label{
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 15px;
+	padding-right: 15px;
 	line-height: 25px;
 	font-size: 15px;
 }
@@ -160,8 +160,6 @@ margin: 0px 10px 10px 0px;
 }
 footer {
 	background: #EBEBEB;
-	/*position: absolute;
-	padding-top: 50px;*/
 	text-align: center;
 	left: 0;
 	bottom: 0;
@@ -213,15 +211,83 @@ footer a {
 .pagination .prev-next:last-child {
 	margin-left: 5px;
 }
-.pagination li:first-child {
+.pagination li:nth-child(2) {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
 }
-.pagination li:first-child {
+.pagination li:nth-last-child(2) {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
 #checked {
 	background: #F0F0FF;
 	border: 1px solid #0000B7;
+}
+.modal {
+	text-align: left;
+	height: 470px;  
+	width: 590px;
+	background: #FFFFFF;
+	top: 20%;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	z-index:2;
+	display: none; 
+	position: fixed;
+	border-radius: 5px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+}
+.modal-container {
+	font-size: 15px; 
+	line-height: 31px;
+	margin: 0 auto;
+	width: 360px;
+	color: #171717;
+}
+.modal-container h2{
+	font-size: 40px;
+}
+.modal-container input{
+	width: 360px;
+	height: 60px;
+	border: 1px solid #BDBDBD;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+.modal-container input[type='text'] {
+	font-size: 27px;
+}
+.modal-container input[type='password'] {
+	font-size: 37px;
+}
+#input-error{
+	border: 1px solid #D50000;
+}
+#input-check{
+	border: 1px solid #1400D5;
+}
+.modal-container a{
+	float: right;
+}
+.sign-in-button{
+	color: #FFFFFF;
+	margin: 0;
+	text-decoration: none;
+	font-style: normal;
+	font-size: 15px;
+	background: #3205F3;
+	border-radius: 5px;
+}
+#shadow { 
+	position: fixed;
+	width:100%;
+	height:100%;
+	z-index:1;
+	background:#000;
+	opacity: 0.89;
+	left:0;
+	top:0;
 }

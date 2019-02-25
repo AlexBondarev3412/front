@@ -4,6 +4,21 @@
 <link href="css/style.css" rel="stylesheet">
 <title>Макет сайта</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript">
+function showModal() {
+	var shadowLayer = document.createElement('div');
+	shadowLayer.id = 'shadow';
+	document.body.appendChild(shadowLayer);
+
+	var modalWin = document.getElementById('popupWin');
+	modalWin.style.display = 'block';
+	shadowLayer.onclick = function () {
+		shadowLayer.parentNode.removeChild(shadowLayer);
+		modalWin.style.display = 'none';
+		return false;
+	};
+}
+</script>
 </head>
 <body>
 <header>
@@ -21,9 +36,11 @@
 					<li><a href="" title="Catalog">Catalog</a></li>
 					<li><a href="" title="Blog">Blog</a></li>
 				</ul>
-			<nav>
+			</nav>
 			<div class="profile">
-				<a href="" title="Sign In" class="button">Sign In</a>
+				<form>
+					<input type="button" class="button" value="Sign In" onclick="showModal()">
+				</form>
 			</div>
 		</div>
 	</div>
@@ -44,7 +61,7 @@
 				<div class="sort-text"> Sort by: </div>
 				<label><input type="radio" name="sort-by" value="price">Price</label>
 				<label><input type="radio" name="sort-by" value="revelance">Revelance</label>
-				<label><input type="radio" name="sort-by" value="newest" text="New">Newest arrivals</label>
+				<label><input type="radio" name="sort-by" value="newest">Newest arrivals</label>
 				</div>
 			<div class="values-box">
 				<div class="sort-text"> Show by: </div>
@@ -55,24 +72,24 @@
 			<input class="apply-button" type="submit" value="Apply">
 		</form>
 		<ul class="content">
-			<li><img src="images/image1.png"></li>
-			<li><img src="images/image2.png"></li>
-			<li><img src="images/image3.png"></li>
-			<li><img src="images/image4.png"></li>
-			<li><img src="images/image5.png"></li>
-			<li><img src="images/image6.png"></li>
-			<li><img src="images/image7.png"></li>
-			<li><img src="images/image8.png"></li>
-			<li><img src="images/image9.png"></li>
+			<li><img src="images/image1.png" alt="item_1"></li>
+			<li><img src="images/image2.png" alt="item_2"></li>
+			<li><img src="images/image3.png" alt="item_3"></li>
+			<li><img src="images/image4.png" alt="item_4"></li>
+			<li><img src="images/image5.png" alt="item_5"></li>
+			<li><img src="images/image6.png" alt="item_6"></li>
+			<li><img src="images/image7.png" alt="item_7"></li>
+			<li><img src="images/image8.png" alt="item_8"></li>
+			<li><img src="images/image9.png" alt="item_9"></li>
 		</ul>
 		<div class="box">
 				<ul class="pagination">
-				<a href=""><li class="prev-next">Left</li></a>
-				<a href=""><li >1</li></a>
-				<a href=""><li  >2</li></a>
-				<a href=""><li >3</li></a>
-				<a href=""><li  id="checked">4</li></a>
-				<a href=""><li class="prev-next">Right</li></a>
+				<li class="prev-next"><a href="">Left</a></li>
+				<li><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li id="checked"><a href="">4</a></li>
+				<li class="prev-next"><a href="">Right</a></li>
 				</ul>
 		</div>
 	</div>
@@ -92,6 +109,18 @@
 		</div>
 	</div>
 </footer>
-
+<div id="popupWin" class="modal">
+	<div class="modal-container">
+		<h2>Sign in</h2>
+		<form action="#" method="post">
+			Email (phone for mobile accounts)<br>	
+			<input type="text" name="email" id="input-error"><br>
+			Password<br>
+			<input type="password" name="pass" id="input-check"><br>
+			<a href="" title="About">Forgot your password?</a><br><br>
+			<input class="sign-in-button" type="submit" value="Sign in">
+		</form>
+	</div>
+</div>
 </body>
 </html>
