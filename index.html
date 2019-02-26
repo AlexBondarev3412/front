@@ -4,43 +4,28 @@
 <link href="css/style.css" rel="stylesheet">
 <title>Макет сайта</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<script type="text/javascript">
-function showModal() {
-	var shadowLayer = document.createElement('div');
-	shadowLayer.id = 'shadow';
-	document.body.appendChild(shadowLayer);
-
-	var modalWin = document.getElementById('popupWin');
-	modalWin.style.display = 'block';
-	shadowLayer.onclick = function () {
-		shadowLayer.parentNode.removeChild(shadowLayer);
-		modalWin.style.display = 'none';
-		return false;
-	};
-}
-</script>
 </head>
 <body>
 <header>
 	<div class="container">
-		<div class="logo">
-			<a href="">
-				<img src="images/logo.png" alt="Snow">
-			</a>
-		</div>  
-		<div class="header-right">
-			<nav>
-				<ul>
-					<li><a href="" title="About">About</a></li>
-					<li><a href="" title="Contact">Contact</a></li>
-					<li><a href="" title="Catalog">Catalog</a></li>
-					<li><a href="" title="Blog">Blog</a></li>
-				</ul>
-			</nav>
-			<div class="profile">
-				<form>
-					<input type="button" class="button" value="Sign In" onclick="showModal()">
-				</form>
+		<div class="header-container">
+			<div class="logo">
+				<a href="">
+					<img src="images/logo.png" alt="Snow">
+				</a>
+			</div>  
+			<div class="header-right">
+				<nav>
+					<ul>
+						<li><a href="" title="About">About</a></li>
+						<li><a href="" title="Contact">Contact</a></li>
+						<li><a href="" title="Catalog">Catalog</a></li>
+						<li><a href="" title="Blog">Blog</a></li>
+					</ul>
+				</nav>
+				<div class="profile">
+					<button class="button" onclick="showModal()">Sign In</button>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -59,37 +44,109 @@ function showModal() {
 		<form class="box" action="#" method="get">
 			<div class="values-box">
 				<div class="sort-text"> Sort by: </div>
-				<label><input type="radio" name="sort-by" value="price">Price</label>
-				<label><input type="radio" name="sort-by" value="revelance">Revelance</label>
-				<label><input type="radio" name="sort-by" value="newest">Newest arrivals</label>
+				<label class="container-check">Price<input type="radio" name="sort-by" value="price"><span class="radiomark"></span></label>
+				<label class="container-check">Revelance<input type="radio" name="sort-by" value="revelance"><span class="radiomark"></span></label>
+				<label class="container-check">Newest arrivals<input type="radio" name="sort-by" value="newest"><span class="radiomark"></span></label>
 				</div>
 			<div class="values-box">
 				<div class="sort-text"> Show by: </div>
-				<label><input type="checkbox" name="all" value="1">All</label>
-				<label><input type="checkbox" name="t-shirt" value="1">T-shirt</label>
-				<label><input type="checkbox" name="mockup" value="1">Mockup</label>
+				<label class="container-check">All<input type="checkbox" name="all" value="1"><span class="checkmark"></span></label>
+				<label class="container-check">T-shirt<input type="checkbox" name="t-shirt" value="1"><span class="checkmark"></span></label>
+				<label class="container-check">Mockup<input type="checkbox" name="mockup" value="1"><span class="checkmark"></span></label>
 			</div>
 			<input class="apply-button" type="submit" value="Apply">
 		</form>
 		<ul class="content">
-			<li><img src="images/image1.png" alt="item_1"></li>
-			<li><img src="images/image2.png" alt="item_2"></li>
-			<li><img src="images/image3.png" alt="item_3"></li>
-			<li><img src="images/image4.png" alt="item_4"></li>
-			<li><img src="images/image5.png" alt="item_5"></li>
-			<li><img src="images/image6.png" alt="item_6"></li>
-			<li><img src="images/image7.png" alt="item_7"></li>
-			<li><img src="images/image8.png" alt="item_8"></li>
-			<li><img src="images/image9.png" alt="item_9"></li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image1.png" alt="item_1">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image2.png" alt="item_2">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image3.png" alt="item_3">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image4.png" alt="item_4">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image5.png" alt="item_5">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image6.png" alt="item_6">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image7.png" alt="item_7">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image8.png" alt="item_8">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
+			<li>
+				<a href="" class="product_link">
+				<img src="images/image9.png" alt="item_9">
+				<div class="info">
+					<p class="info_name">Name</p>
+					<p class="info_type">Type</p>
+				</div>
+				</a>
+			</li>
 		</ul>
 		<div class="box">
 				<ul class="pagination">
-				<li class="prev-next"><a href="">Left</a></li>
-				<li><a href="">1</a></li>
-				<li><a href="">2</a></li>
-				<li><a href="">3</a></li>
-				<li id="checked"><a href="">4</a></li>
-				<li class="prev-next"><a href="">Right</a></li>
+				<a href=""><li class="prev-next">Left</li></a>
+				<a href=""><li>1</li></a>
+				<a href=""><li>2</li></a>
+				<a href=""><li>3</li></a>
+				<a href=""><li id="checked">4</li></a>
+				<a href=""><li class="prev-next">Right</li></a>
 				</ul>
 		</div>
 	</div>
@@ -109,18 +166,20 @@ function showModal() {
 		</div>
 	</div>
 </footer>
-<div id="popupWin" class="modal">
-	<div class="modal-container">
-		<h2>Sign in</h2>
-		<form action="#" method="post">
-			Email (phone for mobile accounts)<br>	
-			<input type="text" name="email" id="input-error"><br>
-			Password<br>
-			<input type="password" name="pass" id="input-check"><br>
-			<a href="" title="About">Forgot your password?</a><br><br>
-			<input class="sign-in-button" type="submit" value="Sign in">
-		</form>
+<script src="scripts/script.js"></script>
+	<div id="popupWin" class="modal">
+		<div class="modal-container">
+			<h2>Sign in</h2>
+			<form action="#" method="post">
+				Email (phone for mobile accounts)<br>	
+				<input type="text" name="email" id="input-error"><br>
+				Password<br>
+				<input type="password" name="pass" id="input-check"><br>
+				<a href="" title="About">Forgot your password?</a><br><br>
+				<input class="sign-in-button" type="submit" value="Sign in">
+			</form>
+		</div>
 	</div>
-</div>
+	<div id="shadow"></div>
 </body>
 </html>
